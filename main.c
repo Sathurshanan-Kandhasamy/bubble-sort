@@ -4,19 +4,31 @@
 
 int compare(int a, int b)
 {
-    if (a > b) return 1;
-    else return -1;
+    if (a > b)
+    {
+        return 1;
+    } else 
+    {
+        return -1;
+    }
 }
 
 int absoluteCompare(int a, int b)
 {
-    if (abs(a) > abs(b)) return 1;
-    else return -1;
+    if (abs(a) > abs(b))
+    {
+        return 1;
+    } else
+    {
+       return -1; 
+    }
 }
 
 void bubbleSort(int *a, int n, int (*compare)(int, int))
 {
-    int i, j, temp;
+    int i;
+    int j;
+    int temp;
     for (i = 0; i < n; i++)
     {
         for (j = 0; j < n - 1; j++)
@@ -38,5 +50,8 @@ int main()
     void (*p)(int*, int, int (*)(int, int)) = &bubbleSort; 
     (*p)(a, 6, &absoluteCompare);
 
-    for (int i = 0; i < 6; i++) printf("%d ", a[i]);
+    for (int i = 0; i < 6; i++)
+    {
+        printf("%d ", a[i]);
+    } 
 }
