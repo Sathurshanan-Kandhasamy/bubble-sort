@@ -24,7 +24,7 @@ int absoluteCompare(int a, int b)
     }
 }
 
-void bubbleSort(int *a, int n, int (*compare)(int, int))
+void bubbleSort(int* a, int n, int (*compare)(int, int))
 {
     int i;
     int j;
